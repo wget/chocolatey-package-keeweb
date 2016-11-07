@@ -10,10 +10,12 @@ $validExitCodes = @(2)
 
 if ($key.Count -eq 1) {
     $key | % { 
-        $file = "$($_.UninstallString)"
+        # The chocolatey uninstaller function when used in combination of a
+        # registry key has issues with NSIS and InnoSetup installers.
+        # Circumvent the problem until this bug gets fixed:
+        # https://github.com/chocolatey/choco/issues/1039
+        $file = "$($_.UninstallString.Trim('"'))"
 
-        # We still get a warning that the script may not find the uninstaller and advises us to use full path executables, while this is clearly what we are doing here.
-        # This seems to be due to this line https://goo.gl/uZWyMq but I don't understand while they are checking against msiexec while this is a simple NSIS exe uninstaller.
         Uninstall-ChocolateyPackage -PackageName $packageName `
                                     -FileType $installerType `
                                     -SilentArgs "$silentArgs" `
