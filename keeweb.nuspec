@@ -1,44 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
+     uppercase omega letter enclosed in quotation marks, you should use an
+     editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>keeweb</id>
-        <version>1.3.3</version>
-        <packageSourceUrl>https://github.com/wget/chocolatey_keeweb</packageSourceUrl>
-        <owners>wget</owners>
         <title>keeweb</title>
+        <version>1.3.3</version>
         <authors>antelle</authors>
+        <owners>wget</owners>
+        <summary>Free cross-platform password manager compatible with KeePass</summary>
+        <description>This webapp is a browser and desktop password manager compatible with KeePass databases. It doesn't require any server or additional resources. The app can run either in browser, or as a desktop app.</description>
         <projectUrl>https://https://keeweb.info/</projectUrl>
-        <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
-        <iconUrl>http://cdn.rawgit.com/wget/chocolatey_keeweb/master/icon.png</iconUrl>
+        <tags>keeweb keypass password admin</tags>
         <copyright>2016 Antelle</copyright>
         <licenseUrl>https://github.com/keeweb/keeweb/blob/master/LICENSE.txt</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
+        <iconUrl>http://cdn.rawgit.com/wget/chocolatey_keeweb/master/icon.png</iconUrl>
+        <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>  
+        <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/keeweb/keeweb</projectSourceUrl>
         <docsUrl>https://github.com/keeweb/keeweb/wiki</docsUrl>
-        <!--<mailingListUrl></mailingListUrl>-->
         <bugTrackerUrl>https://github.com/keeweb/keeweb/issues</bugTrackerUrl>
-        <tags>keeweb keypass password admin</tags>
-        <summary>Free cross-platform password manager compatible with KeePass</summary>
-        <description>This webapp is a browser and desktop password manager compatible with KeePass databases. It doesn't require any server or additional resources. The app can run either in browser, or as a desktop app.</description>
-        <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>  
-
-        <!--<dependencies>
-            <dependency id="" version="__MINIMUM_VERSION__" />
-            <dependency id="" version="[__EXACT_VERSION__]" />
-            <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-            <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-            <dependency id="" />
-            <dependency id="chocolatey-uninstall.extension" />
-        </dependencies>-->
-        <!-- chocolatey-uninstall.extension - If supporting 0.9.9.x (or below) and including a chocolateyUninstall.ps1 file to uninstall an EXE/MSI, you probably want to include chocolatey-uninstall.extension as a dependency. Please verify whether you are using a helper function from that package. -->
-
-        <!--<provides>NOT YET IMPLEMENTED</provides>-->
-        <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-        <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+        <packageSourceUrl>https://github.com/wget/chocolatey_keeweb</packageSourceUrl>
   </metadata>
   <files>
       <file src="tools\**" target="tools" />
-      <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
