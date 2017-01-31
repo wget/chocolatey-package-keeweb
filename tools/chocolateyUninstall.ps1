@@ -1,15 +1,15 @@
-﻿$packageName = 'keeweb'
+$packageName = 'keeweb'
 $softwareName = 'keeweb*'
-$installerType = 'exe'  
+$installerType = 'exe'
 
 $silentArgs = '/S'
-# Seems weird, but actually the uninstaller always returns 2 as exit code 
+# Seems weird, but actually the uninstaller always returns 2 as exit code
 $validExitCodes = @(2)
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
-    $key | % { 
+    $key | % {
         # The chocolatey uninstaller function when used in combination of a
         # registry key has issues with NSIS and InnoSetup installers.
         # Circumvent the problem until this bug gets fixed:

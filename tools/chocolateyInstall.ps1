@@ -1,4 +1,4 @@
-﻿$packageName= 'keeweb'
+$packageName= 'keeweb'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://github.com/keeweb/keeweb/releases/download/v1.3.3/KeeWeb-1.3.3.win.ia32.exe'
 $url64      = 'https://github.com/keeweb/keeweb/releases/download/v1.3.3/KeeWeb-1.3.3.win.x64.exe'
