@@ -1,7 +1,7 @@
 $packageName= 'keeweb'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/keeweb/keeweb/releases/download/v1.4.0/KeeWeb-1.4.0.win.ia32.exe'
-$url64      = 'https://github.com/keeweb/keeweb/releases/download/v1.4.0/KeeWeb-1.4.0.win.x64.exe'
+$url        = 'https://github.com/keeweb/keeweb/releases/download/v1.5.0/KeeWeb-1.5.0.win.ia32.exe'
+$url64      = 'https://github.com/keeweb/keeweb/releases/download/v1.5.0/KeeWeb-1.5.0.win.x64.exe'
 
 $packageArgs = @{
     packageName   = $packageName
@@ -12,9 +12,9 @@ $packageArgs = @{
 
     softwareName  = 'keeweb*'
 
-    checksum      = '72d314a368ca82a60ad0f30ea2032dbee3b3331051debf3e6c85efb19a920999caad388b4a8a8e0d94214e16a72973fa31e01470688707addbad628b42fd4336'
+    checksum      = '4c9a7353e950606e04823dc9599c20f1842856212444b68e9bfdaf46841a0a0cdabd4561830b72dfcd343d81e68a9669dfe8573a5f63a6f600aee23db142d65b'
     checksumType  = 'sha512'
-    checksum64    = '11fc7fb1e473a583c72bb30ef30d249cc881983036fd6ae756af7f681830c3a9ae926dd6bfb608bf3f7fd9250932ea736d76d18cd07e1a1c3f14f24f9f3eae1e'
+    checksum64    = '0f7e9d348e6a2816f3f9aab33a7e1a994c5f72b74427b038cb812ebadc7edd2da74bb17ceb57102d4a5a5138fe0eb118d8ff080479034be215c41984d0cc5e33'
     checksumType64= 'sha512'
 
     #NSIS
