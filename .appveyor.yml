@@ -1,9 +1,5 @@
 version: '{build}'
 image: WMF 5
-environment:
-  # https://ci.appveyor.com/tools/encrypt
-  mail_user:
-    secure: E9myKiksXp1jaF0CcY21hb8p1/NvLADn0GqK6Msw/WM=
 init:
 - ps: |
     # Powershell on some installations launches a shell with TLS 1.0 as default
@@ -40,7 +36,7 @@ artifacts:
 deploy: off
 notifications:
 - provider: Email
-  to: $(env:mail_user)
+  to: william+chocolatey@gathoye.be
   on_build_success: true
   on_build_failure: true
   on_build_status_changed: true
