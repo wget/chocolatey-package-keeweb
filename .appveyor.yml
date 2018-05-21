@@ -9,8 +9,8 @@ init:
     # Powershell on some installations launches a shell with TLS 1.0 as default
     # settings leading to the following error message:
     # "The request was aborted: Could not create SSL/TLS secure channel."
-    # Force the use of TLS 1.2 instead of the outdated TLS 1.0.
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    # Force the use of recent TLS versions instead of the outdated TLS 1.0.
+    [Net.ServicePointManager]::SecurityProtocol =  @([Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Tls11,  [Net.SecurityProtocolType]::Tls)
 
     # The $env:PATH is way too long; try to reduce it a bit.
     # src.: https://gist.github.com/wget/a102f89c301014836aaa49a98dd06ee2
@@ -40,7 +40,7 @@ artifacts:
 deploy: off
 notifications:
 - provider: Email
-  to: $(mail_user)
+  to: $(env:mail_user)
   on_build_success: true
   on_build_failure: true
   on_build_status_changed: true

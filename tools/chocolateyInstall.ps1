@@ -22,4 +22,5 @@ $packageArgs = @{
     validExitCodes= @(0)
 }
 
+[Net.ServicePointManager]::SecurityProtocol =  @([Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Tls11,  [Net.SecurityProtocolType]::Tls)
 Install-ChocolateyPackage @packageArgs
