@@ -1,13 +1,6 @@
 version: '{build}'
-image: WMF 5
 init:
 - ps: |
-    # Powershell on some installations launches a shell with TLS 1.0 as default
-    # settings leading to the following error message:
-    # "The request was aborted: Could not create SSL/TLS secure channel."
-    # Force the use of recent TLS versions instead of the outdated TLS 1.0.
-    [Net.ServicePointManager]::SecurityProtocol =  @([Net.SecurityProtocolType]::Tls12, [Net.SecurityProtocolType]::Tls11,  [Net.SecurityProtocolType]::Tls)
-
     # The $env:PATH is way too long; try to reduce it a bit.
     # src.: https://gist.github.com/wget/a102f89c301014836aaa49a98dd06ee2
     Write-Host "This is the path: $env:path"
